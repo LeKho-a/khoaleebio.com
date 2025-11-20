@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Khoa Đẹp Trai</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <script src="https://kit.fontawesome.com/deff8491e4.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/gif" href="images/favicon.gif">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img class="avatar" src="images/dallas.jpg" alt="avatar">
+
+        <h3>Lê Đăng Khoa</h3>
+
+        <p class="intro">
+            Chào bạn, Tôi là Khoa còn dưới đây là thông tin về tui.<br> 
+             =))).
+        </p>
+
+        <audio id="bgm" src="sounds/1_buong doi tay nhau ra_(Instrumental).mp3" loop></audio>
+
+        <div class="links">
+            <button class="button" onclick="window.open('https://www.facebook.com/le.ang.khoa.577724', '_blank')">
+                <i class="fa-brands fa-facebook"></i> Facebook
+            </button>
+
+            <button class="button" onclick="window.open('https://www.youtube.com/@KhoaLee06', '_blank')">
+                <i class="fa-brands fa-youtube"></i> YouTube
+            </button>
+
+            <button class="button" onclick="window.open('https://www.instagram.com/_.dkhoa/', '_blank')">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </button>
+
+            <button class="button" onclick="window.open('https://www.twitch.tv/khoadisupport/videos', '_blank')">
+                <i class="fa-brands fa-twitch"></i> Twitch
+            </button>
+
+            <button class="button" onclick="window.open('https://www.github.com/LeKho-a', '_blank')">
+                <i class="fa-brands fa-github"></i> GitHub
+            </button>
+
+            <button class="button" onclick="window.open('https://www.linkedin.com/in/l%C3%AA-%C4%91%C4%83ng-khoa-5730a4392/', '_blank')">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </button>
+
+            <button class="button" onclick="window.open('https://locket.cam/khoaitsme', '_blank')">
+                <i class="fa-solid fa-heart"></i> Locket
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer><br><br>
+        <p>Email: <b>ledangkhoa28326@gmail.com</b></p>
+        <p>Phone: <b>+84 797 240 867</b></p>
+        <p>© 2025 Lê Đăng Khoa. All rights reserved.</p>
+    </footer>
+
+    <!-- Snow Animation -->
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.textContent = "❄";
+
+            snowflake.style.left = Math.random() * window.innerWidth + "px";
+            snowflake.style.fontSize = Math.random() * 12 + 10 + "px";
+            snowflake.style.animationDuration = Math.random() * 4 + 3 + "s";
+
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => snowflake.remove(), 7000);
+        }
+
+        setInterval(createSnowflake, 350);
+
+        document.addEventListener("click", function () {
+            const audio = document.getElementById("bgm");
+            audio.play();
+        }, { once: true });
+    </script>
+
+</body>
+</html>
