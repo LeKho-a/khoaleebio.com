@@ -1,34 +1,35 @@
-/* GENERAL */
+/* GENERAL - TẾT */
 body {
     margin: 0;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #2ecc71, #27ae60, #1f8f4d);
-    color: white;
+    background: linear-gradient(135deg, #c60000, #a10000, #7a0000);
+    color: #ffecc7;
     font-family: Arial, sans-serif;
     text-align: center;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-/* CONTAINER CARD (hiệu ứng đẹp + glow nhẹ) */
+/* CARD – đỏ vàng Tết */
 .container {
     max-width: 420px;
     margin: auto;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 240, 200, 0.12);
     padding: 30px 20px;
     border-radius: 18px;
-    backdrop-filter: blur(14px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 40px rgba(255, 200, 0, 0.25);
+    border: 1px solid rgba(255, 220, 150, 0.4);
 }
 
-/* AVATAR */
+/* AVATAR – viền vàng */
 .avatar {
     width: 150px;
     height: 150px;
     border-radius: 999px;
     object-fit: cover;
-    border: 4px solid rgba(255,255,255,0.6);
-    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    border: 4px solid #ffd86b;
+    box-shadow: 0 0 20px rgba(255, 235, 150, 0.5);
     margin-bottom: 10px;
 }
 
@@ -37,25 +38,26 @@ h3 {
     font-family: 'Pacifico', cursive;
     margin: 10px 0 5px 0;
     font-size: 28px;
+    color: #ffe7a8;
 }
 
 /* INTRO */
 .intro {
     font-size: 15px;
-    opacity: 0.9;
+    opacity: 0.95;
     margin-bottom: 25px;
     line-height: 1.5;
 }
 
-/* LINK BUTTONS */
+/* BUTTON – vàng Tết */
 .button {
     width: 100%;
     max-width: 300px;
     padding: 15px 0;
     margin: 12px auto;
     border-radius: 100px;
-    background: white;
-    color: #333;
+    background: #ffe680;
+    color: #7a0000;
     font-size: 16px;
     font-weight: bold;
     border: none;
@@ -63,26 +65,22 @@ h3 {
     font-family: "Roboto Condensed", sans-serif;
     transition: 0.25s;
     display: block;
-    box-shadow: 0px 12px 24px rgba(0,0,0,0.25);
-}
-
-.button i {
-    margin-right: 8px;
+    box-shadow: 0px 12px 24px rgba(255, 190, 0, 0.25);
 }
 
 .button:hover {
-    background: #000;
-    color: white;
-    transform: translateY(-2px);
+    background: #ffbb00;
+    color: #600000;
+    transform: translateY(-3px);
 }
 
-/* SNOW */
+/* HOA MAI RƠI */
 .snowflake {
     position: fixed;
     top: -40px;
     left: 0;
-    color: white;
-    font-size: 14px;
+    color: #ffeb7a; /* Hoa mai vàng */
+    font-size: 18px;
     pointer-events: none;
     animation-name: fall;
     animation-timing-function: linear;
@@ -90,7 +88,7 @@ h3 {
 
 @keyframes fall {
     to {
-        transform: translateY(110vh);
+        transform: translateY(110vh) rotate(360deg);
     }
 }
 
@@ -98,6 +96,7 @@ h3 {
 footer {
     margin-top: 40px;
     font-size: 14px;
-    opacity: 0.95;
+    opacity: 0.9;
     line-height: 1.6;
+    color: #ffecc7;
 }
