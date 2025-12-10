@@ -69,29 +69,26 @@
         <p>© 2025 Lê Đăng Khoa. All rights reserved.</p>
     </footer>
 
-    <!-- Snow Animation -->
     <script>
-        function createSnowflake() {
-            const snowflake = document.createElement("div");
-            snowflake.classList.add("snowflake");
-            snowflake.textContent = "🌼";
+    document.addEventListener("DOMContentLoaded", () => {
+        const petals = ["✿", "❀", "❁", "✾", "❋"];
 
-            snowflake.style.left = Math.random() * window.innerWidth + "px";
-            snowflake.style.fontSize = Math.random() * 12 + 10 + "px";
-            snowflake.style.animationDuration = Math.random() * 4 + 3 + "s";
+        function createPetal() {
+            const petal = document.createElement("div");
+            petal.classList.add("snowflake");
+            petal.innerText = petals[Math.floor(Math.random() * petals.length)];
 
-            document.body.appendChild(snowflake);
+            petal.style.left = Math.random() * 100 + "vw";
+            petal.style.fontSize = (Math.random() * 10 + 16) + "px";
+            petal.style.animationDuration = (Math.random() * 5 + 6) + "s";
+            petal.style.opacity = Math.random() * 0.8 + 0.4;
 
-            setTimeout(() => snowflake.remove(), 7000);
+            document.body.appendChild(petal);
+            setTimeout(() => petal.remove(), 8000);
         }
 
-        setInterval(createSnowflake, 350);
-
-        document.addEventListener("click", function () {
-            const audio = document.getElementById("bgm");
-            audio.play();
-        }, { once: true });
+        setInterval(createPetal, 220);
+    });
     </script>
-
 </body>
 </html>
