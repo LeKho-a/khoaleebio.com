@@ -13,11 +13,23 @@
 
     <!-- Icon -->
     <script src="https://kit.fontawesome.com/deff8491e4.js" crossorigin="anonymous"></script>
-
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <link rel="icon" type="image/gif" href="images/favicon.gif">
 </head>
 
 <body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class = "topbar">
+        <ul>
+            <li><a href="index.html" id="homeLink">Trang chủ</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+    </div>
 
     <div class="container">
 
@@ -25,15 +37,10 @@
 
         <h3>Lê Đăng Khoa</h3>
 
-        <p class="intro">
-            Chào bạn, Tôi là Khoa còn dưới đây là thông tin về tui.<br> 
-             =))).
-        </p>
-
-        <audio id="bgm" src="sounds/1_buong doi tay nhau ra_(Instrumental).mp3" loop></audio>
+        <p class="intro" id="typing"></p>
 
         <div class="links">
-            <button class="button" onclick="window.open('https://www.facebook.com/KhoaLeezzz', '_blank')">
+            <button class="button" onclick="window.open('https://www.facebook.com/le.ang.khoa.577724', '_blank')">
                 <i class="fa-brands fa-facebook"></i> Facebook
             </button>
 
@@ -62,34 +69,15 @@
         </div>
     </div>
 
+    <button id="themeToggle" class="theme-btn">🌙</button>
+
     <!-- FOOTER -->
-    <footer><br><br>
+    <footer id="contact"><br><br>
         <p>Email: <b>ledangkhoa28326@gmail.com</b></p>
         <p>Phone: <b>+84 797 240 867</b></p>
         <p>© 2025 Lê Đăng Khoa. All rights reserved.</p>
     </footer>
 
-    <!-- Snow Animation -->
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const petals = ["✿", "❀", "❁", "✾", "❋"];
-
-        function createPetal() {
-            const petal = document.createElement("div");
-            petal.classList.add("snowflake");
-            petal.innerText = petals[Math.floor(Math.random() * petals.length)];
-
-            petal.style.left = Math.random() * 100 + "vw";
-            petal.style.fontSize = (Math.random() * 10 + 16) + "px";
-            petal.style.animationDuration = (Math.random() * 5 + 6) + "s";
-            petal.style.opacity = Math.random() * 0.8 + 0.4;
-
-            document.body.appendChild(petal);
-            setTimeout(() => petal.remove(), 8000);
-        }
-
-        setInterval(createPetal, 220);
-    });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
