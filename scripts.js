@@ -8,6 +8,14 @@ window.addEventListener("load", () => {
 
 })
 
+const music = document.getElementById("bgMusic")
+
+document.addEventListener("click", () => {
+
+    music.play()
+
+})
+
 /* LOADING */
 
 window.addEventListener("load", function(){
